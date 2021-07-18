@@ -1,0 +1,191 @@
+/*****************************************************
+1- Universal style (typography , etc )
+2- main section page
+3- left section
+4- right section
+5- Footer
+
+
+
+****************************************************/
+
+/***************************************
+1- Universal style
+***************************************/
+
+
+* {
+    padding:0 ; 
+    margin:0 ; 
+    font-family: 'Roboto', sans-serif;
+    list-style:none;
+}
+
+body,html {
+    height:100%;
+}
+
+html {
+    font-size:10px;
+}
+a {
+    text-decoration: none !important;
+}
+
+/***************************************
+2- main page
+***************************************/
+
+.main-page {
+    display:grid ; 
+    grid-template-columns: repeat(2,1fr);
+    height:100vh;
+    grid-template-rows: 1fr min-content;
+}
+
+/***********************************
+3- left section
+***********************************/
+
+.left {
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: #1da1fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left .left-content div {
+    display:flex ; 
+    align-items: center;
+    color:#FFF;
+    margin:3rem;
+}
+
+.left .left-content div i {
+    margin-right:3rem ;
+    font-size:2rem;
+}
+
+.left .left-content div h3 {
+    font-size: 2rem;
+}
+
+/***********************************
+4- right section
+***********************************/
+
+.right {
+
+    grid-column: 2/3;
+    grid-row: 1/2;
+    position: relative;
+}
+
+.middle-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-content i {
+
+    color: #1da1f5;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+
+}
+.middle-content h1 {
+
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+    line-height: 4rem;
+
+}
+
+.middle-content p {
+
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+
+}
+
+.middle-content a {
+
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.8rem 0;
+    padding: 0.9rem;
+    border: 0.1rem solid #1aa1f5;
+    border-radius: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+
+}
+
+.middle-content a.sign-up {
+
+    background:#1da1f5;
+
+    color: #FFF;
+
+}
+.middle-content a.sign-up:hover {
+
+    color:#1da1f5;
+
+    background-color: #FFF;
+
+}
+
+.middle-content a.login {
+
+    background-color:#FFF;
+
+    color:rgba(29, 161, 242,1);
+
+}
+.middle-content a.login:hover {
+
+    color:#FFF;
+
+    background-color:rgba(29, 161, 242,1);
+
+}
+
+/*************************************
+5 - Main footer
+*************************************/
+
+.main-page-footer {
+    grid-column: 1/-1;
+    padding:1.5rem ; 
+    grid-row: 2/3;
+    border-top: 0.1rem solid #DDD;
+}
+
+.main-page-footer ul {
+    display:flex ; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-page-footer ul li {
+    padding:1rem 1.5rem ;
+}
+
+.main-page-footer ul li a {
+    font-size:1.5rem ; 
+    color:rgb(91,121,131) ; 
+}
+
+.main-page-footer ul li a:hover {
+    text-decoration: underline;
+}
